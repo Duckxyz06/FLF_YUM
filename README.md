@@ -28,7 +28,7 @@ npm run check
 
 Bản mã nguồn công khai không chứa tên, mã định danh, số điện thoại, email đoàn viên, báo cáo thật hoặc mật khẩu tiện ích. `dist/seed.json` là cơ sở trống với danh mục chi đoàn.
 
-1. **Đoàn viên → Cập nhật HTML / ZIP:** chọn từng file HTML, nhiều HTML hoặc ZIP danh sách YUM đã lưu bằng SingleFile. Chỉ cập nhật chi đoàn xuất hiện trong tệp, giữ nguyên chi đoàn khác. Tên file phải đúng mã chi đoàn, ví dụ ĐHSANH25A.html; nội dung có tên chi đoàn khác sẽ bị chặn.
+1. **Đoàn viên → Cập nhật HTML / ZIP:** chọn từng file HTML, nhiều HTML hoặc ZIP danh sách YUM đã lưu bằng SingleFile. Chỉ cập nhật chi đoàn xuất hiện trong tệp, giữ nguyên chi đoàn khác. Tên file được nhận theo mã chi đoàn gốc: ĐHTAKD25A.html, ĐHTAKD25A (1).html, ĐHTAKD25A (2).html đều thuộc ĐHTAKD25A. Chọn đủ các trang cùng lúc (hoặc ZIP chứa đủ trang) để gộp danh sách trước khi cập nhật. Họ tên trùng giữa các trang chỉ tính một người; các mã định danh được hợp nhất. Nội dung có tên chi đoàn khác tên file sẽ bị chặn khi nhập riêng, hoặc bị bỏ qua kèm cảnh báo khi ở trong ZIP.
 2. **Tài khoản lỗi → Nhập DOCX lỗi:** chọn bảng Word cùng mẫu `Lỗi YUM_Chi đoàn.docx`, xác nhận để tách hồ sơ. Có thể tìm đoàn viên theo tên, mã hoặc chi đoàn và tách thủ công.
 3. **Cuộc thi → Nhập cuộc thi:** nhận nhiều XLSX hoặc ZIP. Form bắt buộc: STT; Họ và tên; Đơn vị; Đối tượng; Thời gian nộp bài; Trạng thái; Điểm. Chấp nhận Đạt / Không đạt. Đặt tên và duyệt sau khi xem số bản ghi khớp, trùng, không khớp.
 4. **Báo cáo:** chọn cuộc thi, một hoặc nhiều khóa, chi đoàn, trạng thái; tìm kiếm; xem bảng tổng hợp, chi tiết hoặc bản ghi cần đối chiếu.
