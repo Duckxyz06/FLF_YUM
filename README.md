@@ -29,7 +29,7 @@ npm run check
 Bản mã nguồn công khai không chứa tên, mã định danh, số điện thoại, email đoàn viên, báo cáo thật hoặc mật khẩu tiện ích. `dist/seed.json` là cơ sở trống với danh mục chi đoàn.
 
 1. **Đoàn viên → Cập nhật HTML / ZIP:** chọn từng file HTML, nhiều HTML hoặc ZIP danh sách YUM đã lưu bằng SingleFile. Chỉ cập nhật chi đoàn xuất hiện trong tệp, giữ nguyên chi đoàn khác. Tên file được nhận theo mã chi đoàn gốc: ĐHTAKD25A.html, ĐHTAKD25A (1).html, ĐHTAKD25A (2).html đều thuộc ĐHTAKD25A. Chọn đủ các trang cùng lúc (hoặc ZIP chứa đủ trang) để gộp danh sách trước khi cập nhật. Họ tên trùng giữa các trang chỉ tính một người; các mã định danh được hợp nhất. Nội dung có tên chi đoàn khác tên file sẽ bị chặn khi nhập riêng, hoặc bị bỏ qua kèm cảnh báo khi ở trong ZIP.
-2. **Tài khoản lỗi → Nhập DOCX lỗi:** chọn bảng Word cùng mẫu `Lỗi YUM_Chi đoàn.docx`, xác nhận để tách hồ sơ. Có thể tìm đoàn viên theo tên, mã hoặc chi đoàn và tách thủ công.
+2. **Đoàn viên bị lỗi → Nhập DOCX lỗi:** chọn bảng Word cùng mẫu `Lỗi YUM_Chi đoàn.docx`, xác nhận để tách hồ sơ. Có thể tìm đoàn viên theo tên, mã hoặc chi đoàn và tách thủ công.
 3. **Cuộc thi → Nhập cuộc thi:** nhận nhiều XLSX hoặc ZIP. Form bắt buộc: STT; Họ và tên; Đơn vị; Đối tượng; Thời gian nộp bài; Trạng thái; Điểm. Chấp nhận Đạt / Không đạt. Đặt tên và duyệt sau khi xem số bản ghi khớp, trùng, không khớp.
 4. **Báo cáo:** chọn cuộc thi, một hoặc nhiều khóa, chi đoàn, trạng thái; tìm kiếm; xem bảng tổng hợp, chi tiết hoặc bản ghi cần đối chiếu.
 5. Xuất XLSX theo đúng bộ lọc: font Times New Roman, bảng kẻ ô, tiêu đề cuộc thi, thời gian xuất Việt Nam và số người. Có sheet tổng hợp chi đoàn. Xuất DOCX lỗi dùng mẫu bảng Word hai hàng tiêu đề, cột ngày sinh Nam/Nữ, đúng thứ tự cột.
@@ -68,3 +68,10 @@ Chức năng **Xuất XLSX** trong Báo cáo dùng mẫu người dùng cung c�
 - **Danh sách:** tiêu đề cuộc thi, phạm vi khóa/chi đoàn, bộ lọc và tìm kiếm, giờ xuất Việt Nam, số người đang hiển thị và tổng phạm vi. 11 cột: STT, Họ và tên, Mã định danh, Ngày sinh, Giới tính, Khóa, Chi đoàn, Trạng thái, Điểm, Thời gian nộp bài, Ghi chú.
 - **Tổng hợp theo chi đoàn:** STT, Chi đoàn, Sĩ số, Đạt, Chưa đạt, Chưa làm, Bị lỗi, Tỷ lệ đã làm và dòng TỔNG. Số liệu tính đủ phạm vi khóa/chi đoàn, độc lập với bộ lọc trạng thái và ô tìm kiếm của danh sách. Tỷ lệ = (Đạt + Chưa đạt) / Sĩ số, lưu dạng số phần trăm.
 - Times New Roman 12, tiêu đề 15 đậm; đầu bảng xanh nhạt chữ đen; kẻ ô, xuống dòng, cố định đầu bảng, lọc dữ liệu, khổ A4 ngang và lặp đầu bảng khi in. Mã định danh giữ dạng văn bản. Không thay số liệu hệ thống bằng số liệu trong file mẫu.
+
+## Hai danh sách lỗi độc lập
+
+- **Đoàn viên bị lỗi:** lỗi thông tin/tài khoản YUM. Tách khỏi chi đoàn và tất cả thống kê cuộc thi; nhập DOCX, tìm kiếm, xác nhận, sửa và khôi phục; xuất Word đúng mẫu cũ.
+- **Đoàn viên bị lỗi liên quan đến cuộc thi:** chọn cuộc thi, khóa/chi đoàn, tìm họ tên hoặc mã định danh, xác nhận lý do. Hồ sơ vẫn thuộc chi đoàn; chỉ cuộc thi được chọn có trạng thái lỗi. Sửa/bỏ đánh dấu độc lập từng cuộc thi; xuất Excel theo mẫu báo cáo và bộ lọc hiện tại.
+
+Dữ liệu lỗi đang lưu được giữ nguyên theo loại: `excluded` là lỗi YUM toàn hệ thống, `contests[].errors` là lỗi riêng cuộc thi. Không tự chuyển hồ sơ giữa hai nhóm khi đổi tên giao diện. File FLF_YUM_V2.zip chỉ dùng tham khảo chức năng; không đưa dữ liệu cá nhân hoặc mật khẩu mặc định của bản tham chiếu lên GitHub.
