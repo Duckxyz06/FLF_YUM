@@ -1,14 +1,14 @@
 # FLF YUM · Đoàn viên Hub
 
-Web quản lý đoàn viên Khoa Ngoại ngữ, theo khóa 2023–2026. Giao diện tiếng Việt, dùng được trên máy tính và điện thoại. Không cần máy chủ ứng dụng hoặc thư viện từ CDN.
+Web quản lý đoàn viên Khoa Ngoại ngữ, theo khóa 2023–2026. Giao diện tiếng Việt, dùng được trên máy tính và điện thoại. Giao diện chạy trên GitHub Pages, không dùng thư viện từ CDN. Tài khoản admin có thể kết nối Supabase Auth/Postgres.
 
 ## Chạy hoàn toàn trên GitHub Pages
 
-Mã web sẵn trong `docs/`, không cần backend hay dịch vụ bên ngoài. Mở **Settings → Pages → Build and deployment**, chọn **Deploy from a branch**, nhánh **main**, thư mục **/docs**, rồi **Save**. GitHub sẽ tự build và cung cấp URL của website. Các lần push sau sẽ tự cập nhật.
+Mã web sẵn trong `docs/`. Nhập/xuất và thống kê chạy trong trình duyệt; đăng nhập admin khi bật cần Supabase. Mở **Settings → Pages → Build and deployment**, chọn **Deploy from a branch**, nhánh **main**, thư mục **/docs**, rồi **Save**. GitHub sẽ tự build và cung cấp URL của website. Các lần push sau sẽ tự cập nhật.
 
 Toàn bộ việc nhập file, thống kê, xuất Excel/Word và lưu JSON chạy trong trình duyệt. Trước lần sử dụng đầu tiên, nhập HTML/ZIP đoàn viên, DOCX lỗi và ZIP cuộc thi, hoặc khôi phục bản sao lưu JSON. Khi đổi thiết bị hoặc xóa dữ liệu trình duyệt cần nhập lại bản sao lưu.
 
-Nếu sửa mã trong `dist/`, chạy `npm run build:pages` rồi commit cả `dist/` và `docs/`. Không đưa dữ liệu đoàn viên thật vào hai thư mục này khi repo công khai.
+Nếu sửa mã trong `dist/`, chạy `npm run build:pages` rồi commit các mã nguồn đã kiểm tra. Build luôn tạo `docs/seed.json` rỗng để tránh xuất dữ liệu cá nhân; không commit `dist/seed.json` cục bộ nếu chứa dữ liệu thật. Không đưa dữ liệu đoàn viên thật vào hai thư mục này khi repo công khai.
 
 ## Chạy trên VS Code
 
@@ -46,7 +46,7 @@ Bản mã nguồn công khai không chứa tên, mã định danh, số điện 
 
 ## Lưu trữ và sao lưu
 
-Dữ liệu được lưu bằng IndexedDB trên **trình duyệt/thiết bị hiện tại**, không phải dữ liệu dùng chung giữa nhiều máy. Không có máy chủ tài khoản hay mật khẩu admin mặc định. Bản Sites có thể được bảo vệ bằng quyền truy cập riêng tư của chủ sở hữu; tự triển khai trên máy chủ công khai cần thêm lớp xác thực trước khi nạp dữ liệu thật.
+Dữ liệu được lưu bằng IndexedDB trên **trình duyệt/thiết bị hiện tại**, không phải dữ liệu dùng chung giữa nhiều máy. Đã có module đăng nhập Supabase và migration `supabase/migrations/202610300001_admin_accounts.sql`. Cấu hình hiện chưa kết nối, nên web vẫn dùng chế độ cục bộ chưa bảo vệ đăng nhập. Xem [cách kích hoạt admin](supabase/admin-setup.md). Không có mật khẩu mặc định. Tài khoản admin chỉ bảo vệ luồng truy cập giao diện; dữ liệu cục bộ chưa đồng bộ hoặc mã hóa.
 
 Mục Sao lưu xuất toàn bộ JSON. Khôi phục có kiểm tra cấu trúc, xem số lượng và xác nhận trước khi thay thế. Các thay đổi lớn lưu tối đa 5 bản an toàn cục bộ; xóa dữ liệu trình duyệt cũng xóa các bản này. Hãy xuất JSON định kỳ. File JSON chứa dữ liệu cá nhân, lưu ở nơi được bảo vệ.
 
@@ -60,3 +60,11 @@ Mục Sao lưu xuất toàn bộ JSON. Khôi phục có kiểm tra cấu trúc, 
 - `tests/core.test.mjs`: kiểm tra logic phân loại, gộp trùng, bộ lọc, tách lỗi, backup.
 
 Không đưa `private-inputs/`, báo cáo hoặc bản sao lưu thật lên repository công khai. Tiện ích đăng nhập ban đầu chỉ được tham khảo về tổ chức khóa/chi đoàn; không sao chép thông tin xác thực hay thực hiện đăng nhập thay người dùng.
+
+## Mẫu báo cáo cuộc thi
+
+Chức năng **Xuất XLSX** trong Báo cáo dùng mẫu người dùng cung cấp ngày 30/10/2026:
+
+- **Danh sách:** tiêu đề cuộc thi, phạm vi khóa/chi đoàn, bộ lọc và tìm kiếm, giờ xuất Việt Nam, số người đang hiển thị và tổng phạm vi. 11 cột: STT, Họ và tên, Mã định danh, Ngày sinh, Giới tính, Khóa, Chi đoàn, Trạng thái, Điểm, Thời gian nộp bài, Ghi chú.
+- **Tổng hợp theo chi đoàn:** STT, Chi đoàn, Sĩ số, Đạt, Chưa đạt, Chưa làm, Bị lỗi, Tỷ lệ đã làm và dòng TỔNG. Số liệu tính đủ phạm vi khóa/chi đoàn, độc lập với bộ lọc trạng thái và ô tìm kiếm của danh sách. Tỷ lệ = (Đạt + Chưa đạt) / Sĩ số, lưu dạng số phần trăm.
+- Times New Roman 12, tiêu đề 15 đậm; đầu bảng xanh nhạt chữ đen; kẻ ô, xuống dòng, cố định đầu bảng, lọc dữ liệu, khổ A4 ngang và lặp đầu bảng khi in. Mã định danh giữ dạng văn bản. Không thay số liệu hệ thống bằng số liệu trong file mẫu.

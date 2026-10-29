@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "members": [],
   "excluded": [],
-  "contests": [],
   "branches": [
     {
       "name": "ĐHANH26A",
@@ -317,6 +316,7 @@
       "year": "2023"
     }
   ],
+  "contests": [],
   "audit": [],
   "updatedAt": null
 }

@@ -1,4 +1,4 @@
-import{norm,unit,keyOf,branchFromFilename}from'./core.js?v=78b401dc0744';
+import{norm,unit,keyOf,branchFromFilename}from'./core.js?v=b802b3eae8b8';
 const xml=s=>{const d=new DOMParser().parseFromString(s,'application/xml');if(d.querySelector('parsererror'))throw Error('Tệp XML bị lỗi.');return d;};
 const nodes=(x,n)=>[...x.getElementsByTagNameNS('*',n)];
 const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
