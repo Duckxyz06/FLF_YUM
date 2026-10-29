@@ -2,6 +2,14 @@
 
 Web quản lý đoàn viên Khoa Ngoại ngữ, theo khóa 2023–2026. Giao diện tiếng Việt, dùng được trên máy tính và điện thoại. Không cần máy chủ ứng dụng hoặc thư viện từ CDN.
 
+## Chạy hoàn toàn trên GitHub Pages
+
+Mã web sẵn trong `docs/`, không cần backend hay dịch vụ bên ngoài. Mở **Settings → Pages → Build and deployment**, chọn **Deploy from a branch**, nhánh **main**, thư mục **/docs**, rồi **Save**. GitHub sẽ tự build và cung cấp URL của website. Các lần push sau sẽ tự cập nhật.
+
+Toàn bộ việc nhập file, thống kê, xuất Excel/Word và lưu JSON chạy trong trình duyệt. Trước lần sử dụng đầu tiên, nhập HTML/ZIP đoàn viên, DOCX lỗi và ZIP cuộc thi, hoặc khôi phục bản sao lưu JSON. Khi đổi thiết bị hoặc xóa dữ liệu trình duyệt cần nhập lại bản sao lưu.
+
+Nếu sửa mã trong `dist/`, chạy `npm run build:pages` rồi commit cả `dist/` và `docs/`. Không đưa dữ liệu đoàn viên thật vào hai thư mục này khi repo công khai.
+
 ## Chạy trên VS Code
 
 ```bash

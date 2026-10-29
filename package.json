@@ -1,0 +1,12 @@
+{
+  "name": "flf-yum-hub",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check dist/app.js && node --check dist/core.js && node --check dist/files.js",
+    "serve": "python3 -m http.server 8080 --directory dist",
+    "build:pages": "node scripts/build-pages.mjs"
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "members": [],
+  "excluded": [],
+  "contests": [],
+  "branches": [
+    {
+      "name": "ĐHANH26A",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHANH26B",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHANH26C",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHANH26D",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHSANH26A",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHSANH26B",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHSANH26C",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHSANH26D",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHSANH26E",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHSANH26F",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHSANH26G",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHSANH26H",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHSTQ26A",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHTADL26A",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHTAKD26A",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHTAKD26B",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHTQ26A",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHTQ26B",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHTQ26C",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHTQ26D",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHTQ26E",
+      "year": "2026"
+    },
+    {
+      "name": "ĐHANH25A",
+      "year": "2025"
+    },
+    {
+      "name": "ĐHANH25B",
+      "year": "2025"
+    },
+    {
+      "name": "ĐHANH25C",
+      "year": "2025"
+    },
+    {
+      "name": "ĐHANH25D",
+      "year": "2025"
+    },
+    {
+      "name": "ĐHSANH25A",
+      "year": "2025"
+    },
+    {
+      "name": "ĐHSANH25B",
+      "year": "2025"
+    },
+    {
+      "name": "ĐHSANH25C",
+      "year": "2025"
+    },
+    {
+      "name": "ĐHSANH25D",
+      "year": "2025"
+    },
+    {
+      "name": "ĐHSANH25E",
+      "year": "2025"
+    },
+    {
+      "name": "ĐHSANH25F",
+      "year": "2025"
+    },
+    {
+      "name": "ĐHSANH25G",
+      "year": "2025"
+    },
+    {
+      "name": "ĐHSTQ25A",
+      "year": "2025"
+    },
+    {
+      "name": "ĐHTAKD25A",
+      "year": "2025"
+    },
+    {
+      "name": "ĐHTQ25A",
+      "year": "2025"
+    },
+    {
+      "name": "ĐHTQ25B",
+      "year": "2025"
+    },
+    {
+      "name": "ĐHTQ25C",
+      "year": "2025"
+    },
+    {
+      "name": "ĐHTQ25D",
+      "year": "2025"
+    },
+    {
+      "name": "ĐHTQ25E",
+      "year": "2025"
+    },
+    {
+      "name": "ĐHANH24A",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHANH24B",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHANH24C",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHANH24D",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHANH24E",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHSANH24A",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHSANH24B",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHSANH24C",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHSANH24D",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHSANH24E",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHSANH24F",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHTAKD24A",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHTQ24A",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHTQ24B",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHTQ24C",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHTQ24D",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHTQ24E",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHTQ24F",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHTQA24A",
+      "year": "2024"
+    },
+    {
+      "name": "ĐHANH23A",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHANH23B",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHANH23C",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHANH23D",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHANH23E",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHSANH23A",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHSANH23B",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHSANH23C",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHSANH23D",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHSANH23E",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHSANH23F",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHTAKD23A",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHTQ23A",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHTQ23B",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHTQ23C",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHTQ23D",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHTQ23E",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHTQ23F",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHTQ23G",
+      "year": "2023"
+    },
+    {
+      "name": "ĐHTQA23A",
+      "year": "2023"
+    }
+  ],
+  "audit": [],
+  "updatedAt": null
+}
